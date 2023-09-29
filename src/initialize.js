@@ -102,6 +102,8 @@ export const history = (typeof window !== 'undefined')
     basename: getPath(getConfig().PUBLIC_PATH),
   }) : createMemoryHistory();
 
+export const basename = getPath(getConfig().PUBLIC_PATH);
+
 /**
  * The default handler for the initialization lifecycle's `initError` phase.  Logs the error to the
  * LoggingService using `logError`
