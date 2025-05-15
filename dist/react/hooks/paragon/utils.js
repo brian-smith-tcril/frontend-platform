@@ -17,12 +17,13 @@ export var removeExistingLinks = function removeExistingLinks(existingLinks) {
 */
 export var fallbackThemeBaseUrl = function fallbackThemeBaseUrl() {
   var _window$location2;
+  var config = getConfig();
+  debugger;
+
   // Always use window in development mode to ensure
   // we have the correct port
   if (getConfig().ENVIRONMENT === "development") {
     var _window$location;
-    var config = getConfig();
-    debugger;
     return (_window$location = window.location) === null || _window$location === void 0 ? void 0 : _window$location.origin;
   }
 

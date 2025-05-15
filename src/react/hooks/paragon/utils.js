@@ -16,11 +16,12 @@ export const removeExistingLinks = (existingLinks) => {
 * @returns {string} The default theme base url.
 */
 export const fallbackThemeBaseUrl = () => {
+  const config = getConfig();
+  debugger;
+
   // Always use window in development mode to ensure
   // we have the correct port
   if (getConfig().ENVIRONMENT === "development") {
-    const config = getConfig();
-    debugger;
     return window.location?.origin;
   }
 
